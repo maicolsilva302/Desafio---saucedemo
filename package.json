@@ -1,0 +1,15 @@
+{
+  "name": "cypress-cucumber-pageobject-saucedemo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --headless",
+    "test": "cypress run --headless --spec \"cypress/e2e/**/*.feature\""
+  },
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.5",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "cypress": "^13.13.0"
+  }
+}

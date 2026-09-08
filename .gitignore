@@ -1,0 +1,15 @@
+node_modules/
+package-lock.json
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+cypress/reports/
+coverage/
+.nyc_output/
+.DS_Store
+npm-debug.log*
+*.log
+*.tmp
+*.temp
+Thumbs.db
+

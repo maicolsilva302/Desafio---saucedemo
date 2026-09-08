@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  cypress:
+    image: cypress/included:13.17.0
+    working_dir: /e2e
+    volumes:
+      - .:/e2e
+    command: sh -c "npm install && npx cypress run --headless --spec \"cypress/e2e/**/*.feature\""
+    environment:
+      CYPRESS_baseUrl: https://www.saucedemo.com
+    networks:
+      - test-net
+
+networks:
+  test-net:
+    driver: bridge
