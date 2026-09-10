@@ -52,6 +52,10 @@ npm run test
 ## Cenário incluído
 
 - Login com usuário válido
+- Busca de produtos por valor
+- Compra de produtos por unidade
+- Compra de produtos em lote
+- Logout
 
 ## Observações
 
