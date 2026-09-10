@@ -5,7 +5,7 @@ Este projeto foi estruturado para executar automações em Cypress com suporte a
 ## Estrutura do projeto
 
 - `cypress/e2e/features/`: arquivos `.feature` com cenários em Gherkin
-- `cypress/e2e/step_definitions/`: passos de automação em JavaScript
+- `cypress/support/step_definitions/`: passos de automação em JavaScript
 - `cypress/support/pageObjects/`: classes e métodos de Page Object
 - `cypress.config.js`: configuração principal do Cypress e do Cucumber
 
