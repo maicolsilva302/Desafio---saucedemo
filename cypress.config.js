@@ -7,7 +7,7 @@ module.exports = defineConfig({
   e2e: {
     baseUrl: "https://www.saucedemo.com",
     specPattern: ["cypress/e2e/**/*.feature", "cypress/e2e/**/*.cy.{js,ts}"],
-    stepDefinitions: ["cypress/e2e/step_definitions/**/*.js"],
+    stepDefinitions: ["cypress/support/step_definitions/**/*.js"],
     async setupNodeEvents(on, config) {
       // 1. Configura o Preprocessador do Cucumber
       await preprocessor.addCucumberPreprocessorPlugin(on, config);

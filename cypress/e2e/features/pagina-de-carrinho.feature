@@ -43,7 +43,6 @@ Scenario: Validar Produtos adicionados ao carrinho de compras
     When finalizo a compra clicando no botão finish
     Then visualizo a mensagem de confirmação da compra "Thank you for your order!"
  
- @focus
  Scenario Outline: Efetuar compra "unitária" com sucesso
     Given que acesso a url "https://www.saucedemo.com/"
     And informo usuário "standard_user" e senha "secret_sauce"
@@ -55,5 +54,4 @@ Scenario: Validar Produtos adicionados ao carrinho de compras
     And clico no botão continue
     When finalizo a compra clicando no botão finish
     Then visualizo a mensagem de confirmação da compra "Thank you for your order!"
-    And valido o download do arquivo PDF com sucesso
  

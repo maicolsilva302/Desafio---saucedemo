@@ -1,5 +1,5 @@
 const { When, Then } = require("@badeball/cypress-cucumber-preprocessor");
-const filtrarProdutosPage = require("../../e2e/pageObjects/FiltrarProdutosPage");
+const filtrarProdutosPage = require("../pageObjects/FiltrarProdutosPage");
 
 When("seleciono o filtro {string}", (filtro) => {
   filtrarProdutosPage.selecionarFiltro(filtro);

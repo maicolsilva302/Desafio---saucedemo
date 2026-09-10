@@ -5,7 +5,7 @@ class ProdutosPage {
     };
 
     adicionarProdutoAoCarrinho(produto) {
-        cy.contains('.inventory_item', produto, { matchCase: false })
+            cy.contains('.inventory_item', produto, { matchCase: false })
             .find('button')
             .click();
     }
@@ -24,12 +24,12 @@ class ProdutosPage {
         });
     }
 
-validarQuantidadeNoCarrinho(quantidadeEsperada) {
-  this.elements.quantidadeDeProdutosNoCarrinho()
-    .scrollIntoView()
-    .should('be.visible')
-    .and('have.text', String(quantidadeEsperada));
-}
+    validarQuantidadeNoCarrinho(quantidadeEsperada) {
+        this.elements.quantidadeDeProdutosNoCarrinho()
+            .scrollIntoView()
+            .should('be.visible')
+            .and('have.text', quantidadeEsperada);
+    }
 }
 
 module.exports = new ProdutosPage();

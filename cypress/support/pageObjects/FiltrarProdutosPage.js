@@ -6,9 +6,7 @@ class FiltrarProdutosPage {
     };
 
     selecionarFiltro(filtro) {
-        cy.wait(1500)
         this.elements.selectFiltros().select(filtro);
-        //cy.contains(filtro).click();
     }
 
     visualizarProdutosFiltrados() {

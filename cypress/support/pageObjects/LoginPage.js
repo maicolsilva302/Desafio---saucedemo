@@ -5,6 +5,8 @@ class LoginPage {
     btnLogin: () => cy.get('[data-test="login-button"]'),
     mensagemDeErro: () => cy.get('[data-test="error"]'),
     tituloDoProduto: () => cy.get('.title'),
+    menuLateral: () => cy.get('#react-burger-menu-btn'),
+    btnLogout: () => cy.get('[data-test="logout-sidebar-link"]'),
   };
 
   acessarUrl(url) {
@@ -31,6 +33,15 @@ class LoginPage {
 
   assertErrorMessage(message) {
     this.elements.mensagemDeErro().should('contain', message).and('be.visible');
+  }
+
+  acessarMenuLateral() {
+    this.elements.menuLateral({timeout: 10000}).click();
+  }
+
+  clicarEmLogout() {
+    this.elements.btnLogout().click();
+    this.elements.usernameInput().should('be.visible');
   }
 
 }

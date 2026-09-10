@@ -1,5 +1,5 @@
 const { When, Then } = require("@badeball/cypress-cucumber-preprocessor");
-const produtosPage = require("../../e2e/pageObjects/ProdutosPage");
+const produtosPage = require("../pageObjects/ProdutosPage");
 
 When("adiciono o produto {string} ao carrinho de compras", (produto) => {
   produtosPage.adicionarProdutoAoCarrinho(produto);

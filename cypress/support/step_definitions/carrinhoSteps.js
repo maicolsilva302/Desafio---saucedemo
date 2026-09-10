@@ -1,6 +1,6 @@
 const { When, Then } = require("@badeball/cypress-cucumber-preprocessor");
-const carrinhoPage = require("../../e2e/pageObjects/CarrinhoPage");
-const produtosPage = require("../../e2e/pageObjects/ProdutosPage");
+const carrinhoPage = require("../pageObjects/CarrinhoPage");
+const produtosPage = require("../pageObjects/ProdutosPage");
 
 When("acesso o carrinho de compras", () => {
   produtosPage.elements.carrinhoDeCompras().click();
@@ -19,9 +19,7 @@ When("clico no botão checkout", () => {
 });
 
 When("preencho os campos obrigatórios do checkout com nome {string}, sobrenome {string} e código postal {string}", (nome, sobrenome, codigoPostal) => {
-  cy.get('[data-test="firstName"]').type(nome);
-  cy.get('[data-test="lastName"]').type(sobrenome);
-  cy.get('[data-test="postalCode"]').type(codigoPostal);
+  carrinhoPage.preencherCamposObrigatoriosCheckout(nome, sobrenome, codigoPostal);
 });
 
 When("clico no botão continue", () => {

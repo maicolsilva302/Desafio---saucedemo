@@ -6,6 +6,9 @@ class CarrinhoPage {
         btnFinish: () => cy.get('[data-test="finish"]'),
         mensagemDeConfirmacaoDeCompra: () => cy.get('.complete-header'),
         btnPDF: () => cy.get('[data-test="generate-pdf-order"]'),
+        inputFirstName: () => cy.get('[data-test="firstName"]'),
+        inputLastName: () => cy.get('[data-test="lastName"]'),
+        inputPostalCode: () => cy.get('[data-test="postalCode"]'),
     };
 
     visualizarProdutosAdicionadosNoCarrinho() {
@@ -20,6 +23,12 @@ class CarrinhoPage {
 
     clicarNoBotaoCheckout() {
         this.elements.btnCheckout({ timeout: 10000 }).scrollIntoView().click();
+    }
+
+    preencherCamposObrigatoriosCheckout(nome, sobrenome, codigoPostal) {
+        this.elements.inputFirstName({ timeout: 10000 }).scrollIntoView().type(nome);
+        this.elements.inputLastName({ timeout: 10000 }).scrollIntoView().type(sobrenome);
+        this.elements.inputPostalCode({ timeout: 10000 }).scrollIntoView().type(codigoPostal);
     }
 
     clicarNoBotaoContinue() {
